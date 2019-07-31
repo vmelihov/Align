@@ -1,0 +1,113 @@
+@import "parts/_fonts.scss";
+@import "parts/_vars.scss";
+
+body {
+    font: 14px $cStd;
+    color: #12172A;
+}
+
+.g- {
+    &header {
+        display: block;
+        position: sticky;
+        top: 0px;
+        height: 80px;
+        background: #fff;
+        padding-top: 25px;
+        z-index: 20;
+        transition: .5s;
+
+        &__logo {
+            display: block;
+            background: url("../img/logo.png") 0px 0px no-repeat;
+            background-size: 100% 100%;
+            width: 80px;
+            height: 40px;
+        }
+
+        &__menu {
+            display: none;
+        }
+    }
+
+    &footer {
+        background: #12172A;
+        color: #fff;
+        padding: 30px 0px 45px;
+        text-align: center;
+
+        &__menu {
+            display: block;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            font: 16px/20px $cStd;
+            margin-bottom: 30px;
+
+            &-link {
+                display: inline-block;
+                margin: 0px 15px;
+                color: #fff;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &__social {
+            margin-bottom: 30px;
+
+            &-one {
+                display: inline-block;
+                line-height: 31px;
+                vertical-align: middle;
+
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: #7A838E;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                }
+
+                &-link {
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: #fff;
+                    margin: 0px 30px;
+                    font-size: 24px;
+                    transition: .3s;
+
+                    &:hover {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 30px;
+                    }
+                }
+
+                &:last-of-type:after {
+                    display: none;
+                }
+            }
+        }
+
+        &__text {
+            color: #7A838E;
+            font: 12px/16px $cStd;
+        }
+    }
+}
+
+//Animation Styles
+.g-animated {
+    transition: .5s;
+}
+
+.animated .js-orderEl {
+    opacity: 0;
+    transform: translate(0px, 30px);
+}
+
+//Animation Styles
