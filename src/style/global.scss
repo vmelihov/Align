@@ -14,11 +14,22 @@ body {
         height: 80px;
         background: #fff;
         padding-top: 25px;
-        z-index: 20;
-        transition: .5s;
+        z-index: 99;
+        transition: .3s;
+
+        &.fly {
+            padding-top: 11px;
+            height: 52px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, .1);
+        }
+
+        .container {
+            position: relative;
+        }
 
         &__logo {
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
             background: url("../img/logo.png") 0px 0px no-repeat;
             background-size: 100% 100%;
             width: 80px;
@@ -26,7 +37,57 @@ body {
         }
 
         &__menu {
-            display: none;
+            &-wrap {
+                position: absolute;
+                right: 165px;
+                top: -10px;
+            }
+
+            &-content {
+                display: block;
+
+                &-link {
+                    display: inline-block;
+                    margin-left: 30px;
+                    color: #12172A;
+                    font: 16px/20px $cStd;
+
+                    &:hover {
+                        color: #0094C1;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &-tel {
+                display: none;
+            }
+        }
+
+        &__tel {
+            position: absolute;
+            right: 0px;
+            top: 2px;
+            color: #0094C1;
+            font: 16px/20px $cStd;
+
+            &-icon,
+            &-num {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            &-icon {
+                width: 20px;
+                height: 20px;
+                background: url("../img/icon-tel.png") center center no-repeat;
+                background-size: cover;
+            }
+
+            &:hover {
+                text-decoration: none;
+                color: #0094C1;
+            }
         }
     }
 
@@ -96,6 +157,182 @@ body {
         &__text {
             color: #7A838E;
             font: 12px/16px $cStd;
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .g- {
+        &header {
+            &__menu {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 30px;
+
+                &-mobi-link {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    background: url("../img/icon-menu-mobile.png") center center no-repeat;
+                    cursor: pointer;
+                }
+
+                &-wrap {
+                    right: auto;
+                    top: 55px;
+                    left: -500px;
+                    background: #fff;
+                    width: 260px;
+                    transition: .3s;
+                }
+
+                &-content {
+                    padding: 50px 25px;
+                    margin: 0px;
+
+                    &-link {
+                        display: block;
+                        position: relative;
+                        margin: 0px;
+                        padding: 10px 0px;
+                        border-left: 4px solid transparent;
+
+                        &.active {
+                            margin: 0px 0px 0px -25px;
+                            padding-left: 21px;
+                            border-color: #0094C1;
+                        }
+                    }
+                }
+            }
+
+            &__tel {
+                top: 5px;
+            }
+
+            &.fly &__menu-wrap {
+                top: 40px;
+            }
+        }
+
+        &footer {
+            &__menu {
+                display: none;
+            }
+        }
+    }
+
+    .menuOpened:before {
+        content: "";
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        background: rgba(0, 0, 0, .3);
+        width: 100%;
+        height: 100%;
+        z-index: 98;
+    }
+
+    .menuOpened .g-header__menu-wrap {
+        left: 0px;
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .g- {
+        &header {
+            &__menu-tel {
+                display: block;
+                color: #0094C1;
+                font: 16px/20px $cStd;
+                margin: 0px 25px 25px;
+
+                &-icon,
+                &-num {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                &-icon {
+                    width: 20px;
+                    height: 20px;
+                    background: url("../img/icon-tel.png") center center no-repeat;
+                    background-size: cover;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: #0094C1;
+                }
+            }
+
+            &__tel {
+                right: 15px;
+
+                &-num {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.ui-dropdown {
+    color: #12172A;
+
+    &__btn {
+        cursor: pointer;
+
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    .show &__btn span {
+        transform: rotate(180deg);
+    }
+
+    &__menu {
+        width: 320px;
+        box-shadow: 0px 5px 10px rgba(18, 23, 42, 0.1);
+        border: 1px solid #DEE1E5;
+
+        &-content {
+            max-height: 225px;
+            overflow: hidden;
+            position: relative;
+            padding: 15px;
+
+            &-input {
+                border: 0px;
+                display: block;
+                width: 100%;
+                font: 16px/20px $cStd;
+                height: 30px;
+                margin-bottom: 15px;
+
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            &-item {
+                color: #12172A;
+                padding: 5px 15px;
+                font: 16px/20px $cStd;
+                cursor: pointer;
+                margin: 0px -15px;
+
+                &:hover {
+                    background: #12172A;
+                    color: #fff;
+                }
+            }
+        }
+
+        #ascrail2000 {
+            padding-right: 2px;
         }
     }
 }

@@ -1,4 +1,16 @@
 @font-face {
+    font-family: 'TiemposHeadline Regular';
+    src: url('../fonts/Tiempos Font/TiemposHeadline-Regular/TiemposHeadline-Regular.eot');
+    src: url('../fonts/Tiempos Font/TiemposHeadline-Regular/TiemposHeadline-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Tiempos Font/TiemposHeadline-Regular/TiemposHeadline-Regular.woff') format('woff'),
+        url('../fonts/Tiempos Font/TiemposHeadline-Regular/TiemposHeadline-Regular.woff2') format('woff2'),
+        url('../fonts/Tiempos Font/TiemposHeadline-Regular/TiemposHeadline-Regular.ttf') format('truetype'),
+        url('../fonts/Tiempos Font/TiemposHeadline-Regular/TiemposHeadline-Regular.svg#opensans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'TiemposHeadline Medium';
     src: url('../fonts/Tiempos Font/TiemposHeadline-Medium/TiemposHeadline-Medium.eot');
     src: url('../fonts/Tiempos Font/TiemposHeadline-Medium/TiemposHeadline-Medium.eot?#iefix') format('embedded-opentype'),

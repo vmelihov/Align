@@ -16,34 +16,207 @@
 </head>
 
 <body>
-    <header class="g-header">
+    <header class="g-header js-header">
         <div class="container">
+            <div class="g-header__menu">
+                <i class="g-header__menu-mobi-link js-mobiLink"></i>
+                <div class="g-header__menu-wrap">
+                    <menu class="g-header__menu-content">
+                        <a href="" class="g-header__menu-content-link active">How it Works</a>
+                        <a href="" class="g-header__menu-content-link">About Us</a>
+                        <a href="" class="g-header__menu-content-link">Resources</a>
+                        <a href="" class="g-header__menu-content-link">Educators</a>
+                        <a href="" class="g-header__menu-content-link">News</a>
+                        <a href="" class="g-header__menu-content-link">Help Center</a>
+                    </menu>
+    
+                    <a href="telTo:(123) 456-7890" class="g-header__menu-tel">
+                        <i class="g-header__menu-tel-icon"></i>
+                        <span class="g-header__menu-tel-num">(123) 456-7890</span>
+                    </a>
+                </div>
+            </div>
             <a href="/" class="g-header__logo"></a>
-
-            <menu class="g-header__menu">
-                <a href="" class="g-header__menu-link">How it Works</a>
-                <a href="" class="g-header__menu-link">About Us</a>
-                <a href="" class="g-header__menu-link">Resources</a>
-                <a href="" class="g-header__menu-link">Educators</a>
-                <a href="" class="g-header__menu-link">News</a>
-                <a href="" class="g-header__menu-link">Help Center</a>
-            </menu>
-            <a href="" class="g-header__tel">(123) 456-7890</a>
+    
+            <a href="telTo:(123) 456-7890" class="g-header__tel">
+                <i class="g-header__tel-icon"></i>
+                <span class="g-header__tel-num">(123) 456-7890</span>
+            </a>
         </div>
     </header>
 
     <div class="main-slider">
-        <div class="main-slider__content">
-            <div class="main-slider__title">
-                Redefine your career path.<br />Set your future on track with Align.
-            </div>
-            <div class="main-slider__title-info">
-                Take control of your education and unlock your earning potential.
+        <div id="main" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active main-slider__bg"></div>
+                <div class="carousel-item main-slider__bg"></div>
+                <div class="carousel-item main-slider__bg"></div>
             </div>
         </div>
+
+        <div class="main-slider__content">
+            <div class="container">
+                <div class="main-slider__content-title">
+                    Redefine your career path.
+                    <div class="main-slider__content-title-sl">Set your future on track with Align.</div>
+                </div>
+                <div class="main-slider__content-title-info">
+                    Take control of your education and unlock your earning potential.
+                </div>
+                <div class="main-slider__content-title-info m-mobi">
+                    Set your future on track with Align.
+                </div>
+            </div>
+
+            <form class="main-slider__content-form">
+                <div class="main-slider__content-form-item">
+                    <div class="ui-dropdown dropdown js-dropdown">
+                        <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Desired Education Level
+
+                            <span class="fa fa-chevron-down"></span>
+                        </div>
+                        <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
+                            <div class="ui-dropdown__menu-content js-niceScroll">
+                                <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
+
+                                <div class="ui-dropdown__menu-content-item">
+                                    Associate’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Bachelor’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Master’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Professional Degree (beyond bachelor)
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Doctorate Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Associate’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Bachelor’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Master’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Professional Degree (beyond bachelor)
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Doctorate Degree
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-slider__content-form-item">
+                    <div class="ui-dropdown dropdown js-dropdown">
+                        <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Area of Study (Interest)
+
+                            <span class="fa fa-chevron-down"></span>
+                        </div>
+                        <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
+                            <div class="ui-dropdown__menu-content js-niceScroll">
+                                <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
+
+                                <div class="ui-dropdown__menu-content-item">
+                                    Associate’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Bachelor’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Master’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Professional Degree (beyond bachelor)
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Doctorate Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Associate’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Bachelor’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Master’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Professional Degree (beyond bachelor)
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Doctorate Degree
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-slider__content-form-item">
+                    <div class="ui-dropdown dropdown js-dropdown">
+                        <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Occupation
+
+                            <span class="fa fa-chevron-down"></span>
+                        </div>
+                        <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
+                            <div class="ui-dropdown__menu-content js-niceScroll">
+                                <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
+
+                                <div class="ui-dropdown__menu-content-item">
+                                    Associate’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Bachelor’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Master’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Professional Degree (beyond bachelor)
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Doctorate Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Associate’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Bachelor’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Master’s Degree
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Professional Degree (beyond bachelor)
+                                </div>
+                                <div class="ui-dropdown__menu-content-item">
+                                    Doctorate Degree
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-slider__content-form-item">
+                    <input type="submit" class="main-slider__content-form-submit" value="Explore" />
+                </div>
+            </form>
+        </div>
+
+        <i class="main-slider__scroll fa fa-chevron-down js-scrollTo" data-scroll="#steps"></i>
     </div>
 
-    <div class="main-steps">
+    <div class="main-steps" id="steps">
         <div class="container js-animatedOrder animated" data-animation-step="250">
             <h2 class="main-steps__title g-animated js-orderEl">Three steps into a brighter future:</h2>
 
@@ -118,7 +291,75 @@
         <div class="container js-animatedOrder animated" data-animation-step="200">
             <h2 class="main-solutions__title g-animated js-orderEl">Our Solutions</h2>
 
-            <div class="row">
+            <div id="solutions" class="carousel slide main-solutions__slider" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="main-solutions__block programs g-animated js-orderEl">
+                            <h5 class="main-solutions__block-title">
+                                College Programs
+                            </h5>
+
+                            <div class="main-solutions__block-info">
+                                You can choose from 2yr, 4yr, or
+                                6yr college programs.
+                            </div>
+                            <div class="main-solutions__block-more">
+                                <a href="" class="main-solutions__block-more-link">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="main-solutions__block programs g-animated js-orderEl">
+                            <h5 class="main-solutions__block-title">
+                                Tools that Align
+                            </h5>
+
+                            <div class="main-solutions__block-info">
+                                Our platform showcases
+                                data and graphs that provide earnings over a period of years.
+                            </div>
+                            <div class="main-solutions__block-more">
+                                <a href="" class="main-solutions__block-more-link">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="main-solutions__block programs g-animated js-orderEl">
+                            <h5 class="main-solutions__block-title">
+                                Adult Transitions
+                            </h5>
+
+                            <div class="main-solutions__block-info">
+                                Even if you've got a little gray hair, thatdoesn't mean it's too late.
+                            </div>
+                            <div class="main-solutions__block-more">
+                                <a href="" class="main-solutions__block-more-link">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="main-solutions__block programs g-animated js-orderEl">
+                            <h5 class="main-solutions__block-title">
+                                Communities
+                            </h5>
+
+                            <div class="main-solutions__block-info">
+                                Connect employers, educators and future employees with enspire...
+                            </div>
+                            <div class="main-solutions__block-more">
+                                <a href="" class="main-solutions__block-more-link">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#solutions" data-slide-to="0" class="active"></li>
+                    <li data-target="#solutions" data-slide-to="1"></li>
+                    <li data-target="#solutions" data-slide-to="2"></li>
+                    <li data-target="#solutions" data-slide-to="3"></li>
+                </ol>
+            </div>
+            <div class="row main-solutions__content">
                 <div class="col-sm-3">
                     <div class="main-solutions__block programs g-animated js-orderEl">
                         <h5 class="main-solutions__block-title">
@@ -216,7 +457,7 @@
                     <li data-target="#peopleSay" data-slide-to="1"></li>
                     <li data-target="#peopleSay" data-slide-to="2"></li>
                 </ol>
-                
+
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="main-people__content">
@@ -312,7 +553,7 @@
     <div class="main-subscribe">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-7 col-lg-6">
                     <h4 class="main-subscribe__title">
                         Do you want to learn how you can&nbsp;be&nbsp;part of Project Align?
                     </h4>
@@ -320,7 +561,7 @@
                         Go Mobile with us and receive updates on new resources selected just for Align users.
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-5 col-lg-6">
                     <div class="main-subscribe__form">
                         <input type="tel" class="main-subscribe__form-input" value="Enter Phone Number" />
                         <input type="submit" class="main-subscribe__form-submit" value="Subscribe" />
@@ -333,7 +574,8 @@
     <div class="main-redefine">
         <div class="container">
             <h2 class="main-redefine__title">
-                Redefine your career path.<br />Set your future on track with Align.
+                Redefine your career path.
+                <div class="main-redefine__title-set">Set your future on track with Align.</div>
             </h2>
 
             <a href="" class="main-redefine__align">Align My Career</a>
@@ -352,7 +594,7 @@
                 <a href="" class="g-footer__menu-link">Contact Us</a>
             </div>
         </menu>
-
+    
         <div class="container">
             <div class="g-footer__social">
                 <div class="g-footer__social-one">
@@ -365,7 +607,7 @@
                     <a href="" class="g-footer__social-one-link fab fa-instagram"></a>
                 </div>
             </div>
-
+    
             <div class="g-footer__text">
                 *This is an education offer not related to any jobs, promotions, or rewards. Prospective students should
                 discuss these options with a school representative,
@@ -378,6 +620,8 @@
     </footer>
 
     <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="extension/jquery.nicescroll.js"></script>
+    <script src="extension/bootstrap/js/popper.min.js"></script>
     <script src="extension/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/global.js"></script>
 </body>

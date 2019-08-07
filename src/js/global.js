@@ -1,7 +1,6 @@
 jQuery(function ($) {
     var windowBottomLine = 0;
 
-
     var checkAnimation = function () {
         windowBottomLine = $(window).scrollTop() + $(window).height() / 1.5;
 
@@ -28,5 +27,64 @@ jQuery(function ($) {
     checkAnimation();
     $(window).on("scroll", function () {
         checkAnimation();
+
+        if ($(window).scrollTop() > 0) {
+            if (!$(".js-header").hasClass("fly")) {
+                $(".js-header").addClass("fly");
+            };
+        } else {
+            $(".js-header").removeClass("fly");
+        }
+    });
+
+    $(".js-niceScroll").niceScroll({
+        cursorborder: "",
+        background: "transparent",
+        cursorcolor: "#12172A",
+        autohidemode: !1,
+        cursorwidth: "4px",
+        zindex: "auto",
+        //oneaxismousemode: !1,
+    });
+
+    var showNiceScroll = function (_parent) {
+        if (_parent.hasClass("show")) {
+            setTimeout(function () {
+                $(".js-niceScroll").getNiceScroll().resize();
+            }, 100);
+        } else {
+            setTimeout(function () {
+                showNiceScroll(_parent);
+            }, 100);
+        }
+
+    }
+
+    $(".js-dropdownLink").on("click", function () {
+        var _parent = $(this).parents(".js-dropdown");
+
+        showNiceScroll(_parent);
+    });
+
+    $(".js-scrollTo").on("click", function () {
+        $("html, body").animate({
+            scrollTop: $($(this).data("scroll")).offset().top - 50
+        }, 800);
+
+        return false;
+    });
+
+    $(".js-mobiLink").on("click", function () {
+        $("body").toggleClass("menuOpened");
+    });
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if ($("body").hasClass("menuOpened")) {
+            var _parent = $(".g-header__menu"); // тут указываем ID элемента
+            if (!_parent.is(e.target) // если клик был не по нашему блоку
+                &&
+                _parent.has(e.target).length === 0) { // и не по его дочерним элементам
+                $("body").removeClass("menuOpened"); // скрываем его
+            };
+        };
     });
 });
