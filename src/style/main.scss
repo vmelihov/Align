@@ -740,7 +740,7 @@
 
             &__one {
                 text-align: center;
-                margin: 0px 0px 30px;
+                margin: 0px auto 30px;
             }
         }
 
@@ -748,8 +748,8 @@
         &-philosophy {
             padding: 50px 0px 80px;
             text-align: center;
-            background-position: center 180px;
-            background-size: 230px auto;
+            background-position: center 150px;
+            background-size: auto 200px;
 
             &__small {
                 font-size: 16px;
@@ -828,11 +828,16 @@
             padding: 50px 0px;
 
             &__icons {
-                font-size: 0px;
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                flex-flow: wrap;
+                justify-content: center;
+                align-items: center;
 
                 &-one {
                     max-width: 40%;
-                    margin: 0px 5% 30px;
+                    margin: 0px 5% 50px;
                 }
             }
 
