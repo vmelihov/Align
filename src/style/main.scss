@@ -460,6 +460,23 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .main {
+        &-problem,
+        &-philosophy {
+            background-size: 400px auto;
+
+            &__text {
+                max-width: 400px;
+            }
+        }
+
+        &-subscribe__form-input{
+            margin-bottom: 20px;
+        }
+    }
+}
+
 @media (max-width: $screen-sm) {
     .main {
         &-slider {
