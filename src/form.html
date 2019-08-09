@@ -12,17 +12,12 @@
     <link rel="stylesheet" href="extension/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="extension/font-awesome/css/all.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/form.css" />
 </head>
 
 <body>
     //= template/header.html
 
-    <div class="form-line">
-        <div class="container"></div>
-
-        <div class="form-line__bar js-lineBar"></div>
-    </div>
     <div class="container form-line__dummy">
         <h1 class="form__title">Build your future with Align</h1>
         <div class="form__title-text">
@@ -31,7 +26,7 @@
         </div>
 
         <div class="row form-main">
-            <div class="col-sm-4">
+            <div class="col-lg-4">
                 <aside class="form__aside">
                     <h6 class="form-title">Determine your goals</h6>
 
@@ -39,10 +34,11 @@
                         <div class="form__aside-block">
                             <label class="form__aside-block-label">Desired Education Level</label>
                             <div class="ui-dropdown dropdown js-dropdown">
-                                <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown"
+                                <div class="ui-dropdown__btn checked js-dropdownLink" id="el" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     Desired Education Level
 
+                                    <i class="fa fa-check"></i>
                                     <span class="fa fa-chevron-down"></span>
                                 </div>
                                 <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
@@ -61,13 +57,13 @@
                         <div class="form__aside-block">
                             <label class="form__aside-block-label">Area of Study (Interest)</label>
                             <div class="ui-dropdown dropdown js-dropdown">
-                                <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown"
+                                <div class="ui-dropdown__btn js-dropdownLink" id="e2" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     Desired Education Level
 
                                     <span class="fa fa-chevron-down"></span>
                                 </div>
-                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e2">
                                     <div class="ui-dropdown__menu-content js-niceScroll">
                                         <input type="text" class="ui-dropdown__menu-content-input"
                                             placeholder="Select One" />
@@ -83,13 +79,13 @@
                         <div class="form__aside-block">
                             <label class="form__aside-block-label">Occupation</label>
                             <div class="ui-dropdown dropdown js-dropdown">
-                                <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown"
+                                <div class="ui-dropdown__btn js-dropdownLink" id="e3" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     Desired Education Level
 
                                     <span class="fa fa-chevron-down"></span>
                                 </div>
-                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e3">
                                     <div class="ui-dropdown__menu-content js-niceScroll">
                                         <input type="text" class="ui-dropdown__menu-content-input"
                                             placeholder="Select One" />
@@ -103,7 +99,7 @@
                         </div>
 
                         <div class="form__aside-block m-input">
-                            <input type="text" class="form__aside-block-input" />
+                            <input type="text" class="form__aside-block-input" placeholder="Zip Code" />
                         </div>
 
                         <div class="form__aside-block">
@@ -112,20 +108,24 @@
                     </form>
                 </aside>
             </div>
-            <div class="col-sm-8">
-                Graph go here
+            <div class="col-lg-8">
+                <div class="form__graph">
+                    Graph go here
+                </div>
             </div>
         </div>
 
-        <h6 class="form-title">To proceed please chose one of the following:</h6>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="form__block">
-                    <div class="form__block-label">
-                        Bachelor’s Degree
-                    </div>
-                    <div class="form__block-title">
-                        Graphic Design
+        <h6 class="form-title form__footer-title">To proceed please chose one of the following:</h6>
+        <div class="row form__blocks">
+            <div class="col-lg-4">
+                <div class="form__block m-blue">
+                    <div class="form__block-header">
+                        <div class="form__block-label">
+                            Bachelor’s Degree
+                        </div>
+                        <div class="form__block-title">
+                            Graphic Design
+                        </div>
                     </div>
 
                     <div class="form__block-data">
@@ -133,9 +133,111 @@
                             <div class="form__block-label">
                                 Avg. Annual Income
                             </div>
-                            <div class="form__block-num">
+                            <div class="form__block-data-item-num">
                                 $86K
                             </div>
+                        </div>
+                        <div class="form__block-data-item">
+                            <div class="form__block-label">
+                                Years to Achieve
+                            </div>
+                            <div class="form__block-data-item-num">
+                                4 years
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__block-footer">
+                        <div class="form__block-footer-btn">
+                            <a href="form-2.html" class="form__block-footer-btn-link">Align My Career</a>
+                        </div>
+
+                        <div class="form__block-footer-del">
+                            <i class="fa fa-trash-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form__block m-orange">
+                    <div class="form__block-header">
+                        <div class="form__block-label">
+                            Doctorate Degree
+                        </div>
+                        <div class="form__block-title">
+                            Physical Therapist Assistant & Aide
+                        </div>
+                    </div>
+
+                    <div class="form__block-data">
+                        <div class="form__block-data-item">
+                            <div class="form__block-label">
+                                Avg. Annual Income
+                            </div>
+                            <div class="form__block-data-item-num">
+                                $250K
+                            </div>
+                        </div>
+                        <div class="form__block-data-item">
+                            <div class="form__block-label">
+                                Years to Achieve
+                            </div>
+                            <div class="form__block-data-item-num">
+                                7–10 yrs
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__block-footer">
+                        <div class="form__block-footer-btn">
+                            <a href="form-2.html" class="form__block-footer-btn-link">Align My Career</a>
+                        </div>
+
+                        <div class="form__block-footer-del">
+                            <i class="fa fa-trash-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form__block m-orange">
+                    <div class="form__block-header">
+                        <div class="form__block-label">
+                            Associate’s Degree
+                        </div>
+                        <div class="form__block-title">
+                            Business Development
+                        </div>
+                    </div>
+
+                    <div class="form__block-data">
+                        <div class="form__block-data-item">
+                            <div class="form__block-label">
+                                Avg. Annual Income
+                            </div>
+                            <div class="form__block-data-item-num">
+                                $250K
+                            </div>
+                        </div>
+                        <div class="form__block-data-item">
+                            <div class="form__block-label">
+                                Years to Achieve
+                            </div>
+                            <div class="form__block-data-item-num">
+                                5 years
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__block-footer">
+                        <div class="form__block-footer-btn">
+                            <a href="form-2.html" class="form__block-footer-btn-link">Align My Career</a>
+                        </div>
+
+                        <div class="form__block-footer-del">
+                            <i class="fa fa-trash-alt"></i>
                         </div>
                     </div>
                 </div>
