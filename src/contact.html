@@ -12,15 +12,173 @@
     <link rel="stylesheet" href="extension/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="extension/font-awesome/css/all.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 </head>
 
 <body>
     //= template/header.html
 
-    <div class="container">
-        <div class="contact-header">
+    <div class="contact-header">
+        <div class="container">
+            <div class="contact-header__subtitle">
+                Contact Us
+            </div>
+            <div class="contact-header__title">
+                Let’s get in touch
+            </div>
 
+            <i class="contact-header__scroll fa fa-chevron-down js-scrollTo" data-scroll="#form"></i>
+        </div>
+    </div>
+
+    <div class="container contact-content">
+        <div class="row" id="form">
+            <div class="col-lg-7">
+                <div class="contact-send">
+                    <div class="contact-send__title">
+                        Send us a note
+                    </div>
+                    <div class="contact-send__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a consequat metus, id mattis
+                        nibh. Fusce eu tincidunt lorem, et faucibus magna. Duis laoreet finibus bibendum.
+                    </div>
+
+                    <div class="row contact-send__line">
+                        <div class="col-sm-6">
+                            <input type="text" class="contact-send__line-input" placeholder="Full Name" />
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="contact-send__line-input" placeholder="Email Address" />
+                        </div>
+                    </div>
+                    <div class="row contact-send__line">
+                        <div class="col-sm-6">
+                            <input type="tel" class="contact-send__line-input" placeholder="Phone Number" />
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="contact-send__line-input" placeholder="Topic" />
+                        </div>
+                    </div>
+
+                    <div class="contact-send__line">
+                        <input type="text" class="contact-send__line-input" placeholder="Your Message" />
+                    </div>
+
+                    <div class="contact-send__submit">
+                        <input type="submit" class="contact-send__submit-btn" value="Submit Enquiry" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <aside class="contact-aside">
+                    <h6 class="contact-aside__title">Redefine your career path</h6>
+
+                    <form>
+                        <div class="contact-aside__block">
+                            <div class="ui-dropdown dropdown js-dropdown">
+                                <div class="ui-dropdown__btn checked js-dropdownLink" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Desired Education Level
+
+                                    <span class="fa fa-chevron-down"></span>
+                                </div>
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
+                                    <div class="ui-dropdown__menu-content js-niceScroll">
+                                        <input type="text" class="ui-dropdown__menu-content-input"
+                                            placeholder="Select One" />
+
+                                        <div class="ui-dropdown__menu-content-item">
+                                            Associate’s Degree
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-aside__block">
+                            <div class="ui-dropdown dropdown js-dropdown">
+                                <div class="ui-dropdown__btn js-dropdownLink" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Desired Education Level
+
+                                    <span class="fa fa-chevron-down"></span>
+                                </div>
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
+                                    <div class="ui-dropdown__menu-content js-niceScroll">
+                                        <input type="text" class="ui-dropdown__menu-content-input"
+                                            placeholder="Select One" />
+
+                                        <div class="ui-dropdown__menu-content-item">
+                                            Associate’s Degree
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-aside__block">
+                            <div class="ui-dropdown dropdown js-dropdown">
+                                <div class="ui-dropdown__btn js-dropdownLink" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Desired Education Level
+
+                                    <span class="fa fa-chevron-down"></span>
+                                </div>
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
+                                    <div class="ui-dropdown__menu-content js-niceScroll">
+                                        <input type="text" class="ui-dropdown__menu-content-input"
+                                            placeholder="Select One" />
+
+                                        <div class="ui-dropdown__menu-content-item">
+                                            Associate’s Degree
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-aside__block m-input">
+                            <input type="text" class="contact-aside__block-input" placeholder="Zip Code" />
+                        </div>
+
+                        <div class="contact-aside__block">
+                            <input class="contact-aside__block-submit" type="submit" value="Explore" />
+                        </div>
+                    </form>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-lg-6">
+                    <h4 class="contact-subscribe__title">
+                        Do you want to learn how you can&nbsp;be&nbsp;part of Project Align?
+                    </h4>
+                    <div class="contact-subscribe__text">
+                        Go Mobile with us and receive updates on new resources selected just for Align users.
+                    </div>
+                </div>
+                <div class="col-sm-5 col-lg-6">
+                    <div class="contact-subscribe__form">
+                        <input type="tel" class="contact-subscribe__form-input" value="Enter Phone Number" />
+                        <input type="submit" class="contact-subscribe__form-submit" value="Subscribe" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-redefine">
+        <div class="container">
+            <h2 class="contact-redefine__title">
+                Redefine your career path.
+                <div class="contact-redefine__title-set">Your journey starts here.</div>
+            </h2>
+
+            <a href="" class="contact-redefine__align">Align My Career</a>
         </div>
     </div>
 
