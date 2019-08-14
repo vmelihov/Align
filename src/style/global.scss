@@ -45,16 +45,25 @@ body {
 
             &-content {
                 display: block;
+                padding-top: 15px;
 
-                &-link {
+                .menu-item {
                     display: inline-block;
                     margin-left: 30px;
-                    color: #12172A;
-                    font: 16px/20px $cStd;
 
-                    &:hover {
-                        color: #0094C1;
-                        text-decoration: none;
+                    a {
+                        color: #12172A;
+                        font: 16px/20px $cStd;
+
+                        &:hover {
+                            color: #0094C1;
+                            text-decoration: none;
+                        }
+                    }
+
+                    &.current-menu-item {
+                        padding-bottom: 27px;
+                        border-bottom: 4px solid #0094C1;
                     }
                 }
             }
@@ -98,19 +107,26 @@ body {
         text-align: center;
 
         &__menu {
-            display: block;
             padding-bottom: 30px;
             border-bottom: 1px solid rgba(255, 255, 255, .1);
             font: 16px/20px $cStd;
             margin-bottom: 30px;
 
-            &-link {
-                display: inline-block;
-                margin: 0px 15px;
-                color: #fff;
+            &-list {
+                padding: 0px;
+                margin: 0px;
 
-                &:hover {
-                    color: #fff;
+                .menu-item {
+                    display: inline-block;
+                    margin: 0px 15px;
+
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
                 }
             }
         }
@@ -250,17 +266,22 @@ body {
                     padding: 50px 25px;
                     margin: 0px;
 
-                    &-link {
+                    .menu-item {
                         display: block;
                         position: relative;
                         margin: 0px;
                         padding: 10px 0px;
                         border-left: 4px solid transparent;
 
-                        &.active {
+                        a {
+                            display: block;
+                        }
+
+                        &.current-menu-item {
                             margin: 0px 0px 0px -25px;
-                            padding-left: 21px;
+                            padding: 0px 0px 0px 21px;
                             border-color: #0094C1;
+                            border-bottom: 0px;
                         }
                     }
                 }
@@ -336,7 +357,7 @@ body {
         }
     }
 
-    .ui-dropdown__menu{
+    .ui-dropdown__menu {
         width: 100%;
     }
 }
