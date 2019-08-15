@@ -65,6 +65,10 @@ jQuery(function ($) {
 
         showNiceScroll(_parent);
     });
+    $(".js-dropdownMenu div div").on("click", function () {
+        var _this = $(this);
+        _this.parents(".js-dropdown").find(".js-dropdownLink").html(_this.text() + '<span class="fa fa-chevron-down"></span>');
+    });
 
     $(".js-scrollTo").on("click", function () {
         $("html, body").animate({
