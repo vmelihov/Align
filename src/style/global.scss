@@ -6,6 +6,69 @@ body {
     color: #12172A;
 }
 
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-collapse: collapse;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+input,
+textarea {
+    -webkit-appearance: none;
+}
+
+.wpcf7 {
+    position: relative;
+}
+
+.wpcf7 input.wpcf7-text.wpcf7-not-valid,
+.wpcf7 textarea.wpcf7-not-valid {
+    border-bottom: 1px solid red;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+    display: none;
+}
+
+.wpcf7 .wpcf7-response-output {
+    font-size: 12px;
+    line-height: 14px;
+    display: block;
+    text-align: center;
+    color: #000;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: -25px;
+}
+
+.wpcf7 .ajax-loader {
+    position: absolute;
+    display: inline-block;
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 15px !important;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    right: 0px;
+    bottom: 10px;
+}
+
 .g- {
     &header {
         display: block;
@@ -50,6 +113,7 @@ body {
                 .menu-item {
                     display: inline-block;
                     margin-left: 30px;
+                    transition: .3s;
 
                     a {
                         color: #12172A;
@@ -71,6 +135,10 @@ body {
             &-tel {
                 display: none;
             }
+        }
+
+        &.fly &__menu-content .menu-item.current-menu-item {
+            padding-bottom: 12px;
         }
 
         &__tel {
