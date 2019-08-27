@@ -82,20 +82,6 @@
                     font-size: 18px;
                     position: relative;
 
-                    i {
-                        position: absolute;
-                        top: 0px;
-                        right: -23px;
-                        color: #2ECC71;
-                        font-size: 14px;
-                        line-height: 18px;
-                        display: none;
-                    }
-
-                    &.checked i {
-                        display: block;
-                    }
-
                     span {
                         position: absolute;
                         right: -47px;

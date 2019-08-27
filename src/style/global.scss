@@ -248,8 +248,26 @@ textarea {
 .ui-dropdown {
     color: #12172A;
 
+    &.error {
+        border-bottom: 1px solid red !important;
+    }
+
     &__btn {
         cursor: pointer;
+
+        i {
+            position: absolute;
+            top: 0px;
+            right: -23px;
+            color: #2ECC71;
+            font-size: 14px;
+            line-height: 18px;
+            display: none;
+        }
+
+        &.checked i {
+            display: block;
+        }
 
         span {
             margin-left: 10px;
@@ -272,6 +290,8 @@ textarea {
             padding: 15px;
 
             &-input {
+                display: none;
+                /*
                 border: 0px;
                 display: block;
                 width: 100%;
@@ -283,6 +303,7 @@ textarea {
                 &:focus {
                     outline: none;
                 }
+                */
             }
 
             &-item {
