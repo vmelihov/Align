@@ -317,6 +317,14 @@ textarea {
                     background: #12172A;
                     color: #fff;
                 }
+
+                &.active {
+                    background: #dedede;
+
+                    &:hover {
+                        color: #12172A;
+                    }
+                }
             }
         }
 
