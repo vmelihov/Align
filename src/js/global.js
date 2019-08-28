@@ -67,7 +67,9 @@ jQuery(function ($) {
     });
     $(".js-dropdownMenu div div").on("click", function () {
         var _this = $(this);
-        _this.parents(".js-dropdown").find(".js-dropdownLink").html(_this.text() + '<span class="fa fa-chevron-down"></span>');
+        _this.parents(".js-dropdown").find(".js-dropdownLinkText").text(_this.text());
+        _this.parents(".js-dropdownMenu").find("div").removeClass("active");
+        _this.addClass("active");
     });
 
     $(".js-scrollTo").on("click", function () {
