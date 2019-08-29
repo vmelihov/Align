@@ -1,27 +1,19 @@
 jQuery(function ($) {
-    $('.js-slick').slick({
-        centerMode: true,
-        slidesToShow: 4,
-        arrows: true,
-        dots: true,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    arrows: true,
-                    dots: true,
-                    centerMode: true,
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    dots: true,
-                    centerMode: true,
-                    slidesToShow: 1
-                }
+    var $carousel = $('.js-carousel'),
+        checkWidth = function () {
+            if ($(window).width() < 768) {
+                $carousel.addClass("carousel slide").carousel({
+                    interval: 5000,
+                    wrap: true,
+                    touch: true
+                });
+            } else {
+                $carousel.removeClass("carousel slide").carousel('dispose');
             }
-        ]
-    });
+        };
+
+    checkWidth();
+    $(window).on("resize", function () {
+        checkWidth();
+    })
 });
