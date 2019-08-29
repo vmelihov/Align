@@ -63,6 +63,19 @@
 
                 .ui-dropdown__btn {
                     line-height: 50px;
+
+                    div {
+                        max-width: 80%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    div,
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
                 }
 
                 &-submit {
@@ -208,9 +221,23 @@
 
         &__block {
             padding: 90px 0px 0px;
+            background-position: center 0px;
+            background-repeat: no-repeat;
 
             &.programs {
-                background: url("../img/icon-solutions.png") center 0px no-repeat;
+                background-image: url("../img/icon-college_programs.png");
+            }
+
+            &.tools {
+                background-image: url("../img/icon-tools.png");
+            }
+
+            &.adult {
+                background-image: url("../img/icon-adult.png");
+            }
+
+            &.communities {
+                background-image: url("../img/icon-communities.png");
             }
 
             &-title {
@@ -462,6 +489,7 @@
 
 @media (max-width: 1024px) {
     .main {
+
         &-problem,
         &-philosophy {
             background-size: 400px auto;
@@ -471,7 +499,7 @@
             }
         }
 
-        &-subscribe__form-input{
+        &-subscribe__form-input {
             margin-bottom: 20px;
         }
     }
