@@ -70,7 +70,19 @@ jQuery(function ($) {
         _this.parents(".js-dropdown").find(".js-dropdownLinkText").text(_this.text());
         _this.parents(".js-dropdownMenu").find("div").removeClass("active");
         _this.addClass("active");
+        _this.parents(".js-dropdownMenu").find(".js-search").val("");
     });
+    $('.js-search').keyup(function () {
+        var rex = new RegExp($(this).val(), 'i'),
+            _this = $(this),
+            _items = _this.parents(".js-dropdownMenu").find("div div");
+
+        _items.hide();
+        _items.filter(function () {
+            return rex.test($(this).text().replace(/[^\wа-яё]+/gi, ""));
+        }).show();
+    })
+
 
     $(".js-scrollTo").on("click", function () {
         $("html, body").animate({

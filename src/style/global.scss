@@ -287,7 +287,7 @@ textarea {
             max-height: 225px;
             overflow: hidden;
             position: relative;
-            padding: 15px;
+            padding: 55px 15px 15px;
 
             &-input {
                 display: none;
@@ -324,6 +324,21 @@ textarea {
                     &:hover {
                         color: #12172A;
                     }
+                }
+            }
+
+            &-search{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                padding: 10px 15px;
+
+                &-input{
+                    border: 0px;
+                    line-height: 26px;
+                    border-bottom: 1px solid #DEE1E5;
+                    width: 100%;
                 }
             }
         }
