@@ -148,9 +148,16 @@
         font: 600 24px/30px $cStd;
     }
 
-    &__footer-title {
-        text-align: center;
-        margin-bottom: 50px;
+    &__footer {
+        &-title {
+            text-align: center;
+        }
+
+        &-sub-title {
+            font: italic 14px $cStd;
+            margin-bottom: 50px;
+            color: #7A838E;
+        }
     }
 
     &__blocks {
@@ -591,7 +598,7 @@
     }
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: 670px) {
     .form {
         &-line {
             margin-bottom: 40px;
@@ -662,6 +669,10 @@
 
                 &.m-input {
                     margin-bottom: 40px !important;
+                }
+
+                &-submit {
+                    max-width: 300px;
                 }
             }
         }
