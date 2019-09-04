@@ -751,6 +751,16 @@
     }
 }
 
+@media (max-width: 670px) {
+    .main {
+
+        &-problem,
+        &-philosophy {
+            background-size: auto 200px;
+        }
+    }
+}
+
 @media (max-width: $screen-xs) {
     .main {
         &-slider__content {
@@ -793,8 +803,7 @@
         &-philosophy {
             padding: 50px 0px 80px;
             text-align: center;
-            background-position: center 150px;
-            background-size: auto 200px;
+            background-position: center 190px;
 
             &__small {
                 font-size: 16px;
