@@ -344,6 +344,8 @@
                 &:after {
                     content: "";
                     position: absolute;
+                    left: 0px;
+                    top: 0px;
                     width: 308px;
                     height: 308px;
                     border: 4px solid #0094C1;
@@ -712,8 +714,22 @@
                 padding: 50px 0px 0px 280px;
                 min-height: 220px;
 
-                &-ava,
-                &:before {
+                &-progress {
+                    left: 0px;
+                    width: 208px;
+                    height: 208px;
+                    clip: rect(0px, 208px, 208px, 104px);
+
+                    &:before,
+                    &:after {
+                        width: 208px;
+                        height: 208px;
+                        clip: rect(0px, 104px, 208px, 0px);
+                    }
+                }
+
+                &-ava {
+                    left: 4px;
                     width: 200px;
                     height: 200px;
                 }
@@ -967,8 +983,12 @@
                 padding: 295px 0px 0px;
                 text-align: center;
 
+                &-progress {
+                    left: 50%;
+                    margin-left: -104px;
+                }
+
                 &-ava,
-                &:before,
                 &:after {
                     left: 50%;
                     margin-left: -100px;
