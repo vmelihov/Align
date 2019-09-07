@@ -51,7 +51,7 @@
                             <span class="fa fa-chevron-down"></span>
                         </div>
                         <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
-                            <div class="ui-dropdown__menu-content js-niceScroll">
+                            <div class="ui-dropdown__menu-content js-niceScrollMain">
                                 <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
 
                                 <div class="ui-dropdown__menu-content-item">
@@ -97,7 +97,7 @@
                             <span class="fa fa-chevron-down"></span>
                         </div>
                         <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
-                            <div class="ui-dropdown__menu-content js-niceScroll">
+                            <div class="ui-dropdown__menu-content js-niceScrollMain">
                                 <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
 
                                 <div class="ui-dropdown__menu-content-item">
@@ -143,7 +143,7 @@
                             <span class="fa fa-chevron-down"></span>
                         </div>
                         <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
-                            <div class="ui-dropdown__menu-content js-niceScroll">
+                            <div class="ui-dropdown__menu-content js-niceScrollMain">
                                 <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
 
                                 <div class="ui-dropdown__menu-content-item">
@@ -565,6 +565,36 @@
     <script src="extension/bootstrap/js/popper.min.js"></script>
     <script src="extension/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/global.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(".js-niceScrollMain").niceScroll({
+                cursorborder: "",
+                background: "transparent",
+                cursorcolor: "#12172A",
+                autohidemode: !1,
+                cursorwidth: "8px",
+                zindex: "auto",
+            });
+
+            var showNiceScroll = function (_parent) {
+                if (_parent.hasClass("show")) {
+                    setTimeout(function () {
+                        $(".js-niceScrollMain").getNiceScroll().resize();
+                    }, 100);
+                } else {
+                    setTimeout(function () {
+                        showNiceScroll(_parent);
+                    }, 100);
+                }
+
+            }
+            $(".js-dropdownLink").on("click", function () {
+                var _parent = $(this).parents(".js-dropdown");
+
+                showNiceScroll(_parent);
+            });
+        });
+    </script>
 </body>
 
 </html>
