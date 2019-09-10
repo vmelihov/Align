@@ -292,12 +292,29 @@
         }
 
         &__icons {
-            text-align: left;
+            position: relative;
+            min-height: 160px;
 
             &-one {
-                display: inline-block;
-                vertical-align: middle;
-                margin: 0px 50px 50px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 160px;
+                height: 80px;
+                position: absolute;
+                top: 50px;
+                opacity: 0;
+                transition: 1s;
+
+                &-img {
+                    max-width: 100%;
+                    max-height: 90%;
+                }
+
+                &.active {
+                    top: 0px;
+                    opacity: 1;
+                }
             }
         }
     }
@@ -563,6 +580,25 @@
     }
 }
 
+@media (min-width: 769px) {
+    .main-knowledge__icons-one {
+
+        &:first-of-type,
+        &:nth-child(3n+1) {
+            left: 10%;
+        }
+
+        &:nth-child(3n+2) {
+            left: 50%;
+            margin-left: -80px;
+        }
+
+        &:nth-child(3n+3) {
+            right: 10%;
+        }
+    }
+}
+
 @media (max-width: $screen-sm) {
     .main {
         &-slider {
@@ -695,9 +731,18 @@
                 margin-bottom: 15px;
             }
 
-            &__icons-one {
-                max-width: 20%;
-                margin-right: 30px;
+            &__icons {
+                &-one {
+
+                    &:first-of-type,
+                    &:nth-child(2n+1) {
+                        left: 10%;
+                    }
+
+                    &:nth-child(2n+2) {
+                        right: 10%;
+                    }
+                }
             }
         }
 
@@ -954,16 +999,20 @@
             padding: 50px 0px;
 
             &__icons {
-                padding-top: 20px;
-                display: flex;
-                flex-direction: column;
-                flex-flow: wrap;
-                justify-content: center;
-                align-items: center;
+                min-height: 100px;
+                margin-top: 30px;
 
                 &-one {
-                    max-width: 40%;
-                    margin: 0px 5% 50px;
+                    width: 120px;
+
+                    &:first-of-type,
+                    &:nth-child(2n+1) {
+                        left: 0px;
+                    }
+
+                    &:nth-child(2n+2) {
+                        right: 0px;
+                    }
                 }
             }
 

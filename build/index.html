@@ -441,16 +441,61 @@
                 Unlock your future by connecting with the right University for you.
             </div>
 
-            <div class="main-knowledge__icons">
-                <img src="img/icon-hardvard.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-cornell.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-stanford.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-princeton.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-rmit.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-gambridge.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-michegan.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-johns-hopkings.png" class="main-knowledge__icons-one" alt="" />
-                <img src="img/icon-university-of-verginia.png" class="main-knowledge__icons-one" alt="" />
+            <div class="main-knowledge__icons js-animateIcons">
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-hardvard.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-cornell.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-stanford.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-princeton.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-rmit.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-gambridge.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-michegan.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-johns-hopkings.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-university-of-verginia.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-ascent.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-berkeley.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-purdue.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-miot.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-atm.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-earnest.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-carnegie.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-sofi.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
+                <div class="main-knowledge__icons-one">
+                    <img src="img/icon-florida.png" class="main-knowledge__icons-one-img" alt="" />
+                </div>
             </div>
 
             <div class="main-knowledge__text">
@@ -683,6 +728,35 @@
 
                 showNiceScroll(_parent);
             });
+
+            var showIconsNum = 2,
+                $animateIcons = $(".js-animateIcons"),
+                $animateDivs = $animateIcons.find("div"),
+                currentAnimated = 0,
+                animIcons = function () {
+                    $animateDivs.removeClass("active");
+
+                    var i = currentAnimated + showIconsNum;
+                    while (currentAnimated < i) {
+                        $animateDivs.eq(currentAnimated).addClass("active");
+                        currentAnimated++;
+                    }
+
+                    if (currentAnimated > $animateDivs.length) {
+                        currentAnimated = 0;
+                    }
+
+                    setTimeout(function () {
+                        animIcons();
+                    }, 5000);
+                };
+            if ($(window).width() > 768) {
+                showIconsNum = 3;
+            }
+
+            setTimeout(function () {
+                animIcons();
+            }, 3000);
         });
     </script>
 </body>
