@@ -254,8 +254,13 @@ textarea {
     padding: 75px 0px;
 
     &__title {
-        font: 36px/42px $thlM;
+        font: 28px/33px $thlM;
         margin-bottom: 5px;
+    }
+
+    &__text {
+        font-size: 11px;
+        line-height: 15px;
     }
 
     &__form {
@@ -488,8 +493,6 @@ textarea {
         color: #fff;
 
         &__title {
-            font-size: 36px;
-            line-height: 42px;
             margin-bottom: 10px;
         }
 
@@ -555,15 +558,6 @@ textarea {
 
     .main-subscribe {
         text-align: center;
-
-        &__title {
-            font: 32px/37px $thlR;
-        }
-
-        &__text {
-            font-size: 16px;
-            line-height: 20px;
-        }
 
         &__form {
             padding-top: 55px;
