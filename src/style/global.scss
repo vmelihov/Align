@@ -244,8 +244,52 @@ textarea {
         }
     }
 
-    &subscr-form-text{
+    &subscr-form-text {
         margin-top: 30px;
+    }
+}
+
+.main-subscribe {
+    background: #B5D9E2;
+    padding: 75px 0px;
+
+    &__title {
+        font: 36px/42px $thlM;
+        margin-bottom: 5px;
+    }
+
+    &__form {
+        padding-top: 45px;
+
+        &-input {
+            margin-right: 30px;
+            background: none;
+            border: 0px;
+            border-bottom: 1px solid #12172A;
+            font: italic 20px/1 $cStd;
+            padding-bottom: 20px;
+
+            &:focus,
+            &:hover {
+                outline: none;
+            }
+        }
+
+        &-submit {
+            width: 200px;
+            background: #12172A;
+            color: #fff;
+            border-radius: 30px;
+            height: 50px;
+            font: 16px/50px $cStd;
+            transition: .5s;
+
+            &:focus,
+            &:hover {
+                outline: none;
+                box-shadow: inset 0px 0px 0px 50px lighten(#12172A, 5%);
+            }
+        }
     }
 }
 
@@ -331,14 +375,14 @@ textarea {
                 }
             }
 
-            &-search{
+            &-search {
                 position: absolute;
                 left: 0px;
                 top: 0px;
                 width: 100%;
                 padding: 10px 15px;
 
-                &-input{
+                &-input {
                     border: 0px;
                     line-height: 26px;
                     border-bottom: 1px solid #DEE1E5;
@@ -346,7 +390,7 @@ textarea {
                 }
             }
 
-            &.no-search{
+            &.no-search {
                 padding: 15px;
             }
         }
@@ -437,6 +481,34 @@ textarea {
     .menuOpened .g-header__menu-wrap {
         left: 0px;
     }
+
+    .main-subscribe {
+        padding: 50px 0px;
+        background: #0094C1;
+        color: #fff;
+
+        &__title {
+            font-size: 36px;
+            line-height: 42px;
+            margin-bottom: 10px;
+        }
+
+        &__form {
+            &-input {
+                margin-bottom: 30px;
+                color: #fff;
+                border-color: #fff;
+                width: 100%;
+            }
+
+            &-submit {
+                border: 1px solid #fff;
+                color: #fff;
+                background: none;
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: $screen-xs) {
@@ -479,6 +551,34 @@ textarea {
 
     .ui-dropdown__menu {
         width: 100%;
+    }
+
+    .main-subscribe {
+        text-align: center;
+
+        &__title {
+            font: 32px/37px $thlR;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__form {
+            padding-top: 55px;
+            position: relative;
+
+            &:before {
+                content: "Phone Number";
+                position: absolute;
+                left: 0px;
+                top: 30px;
+                font: italic 12px/20px $cStd;
+                color: #fff;
+                opacity: .5;
+            }
+        }
     }
 }
 
