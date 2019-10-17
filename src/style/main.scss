@@ -46,52 +46,19 @@
                 }
             }
 
-            &-form {
+            &-getstarted {
                 display: block;
-                background: #fff;
-                padding: 35px 40px;
-                max-width: 930px;
+                width: 200px;
                 margin: auto;
-                font-size: 0px;
+                background: #F86015;
+                border-radius: 30px;
+                font: 16px/50px $cStd;
+                color: #fff;
+                height: 50px;
+                cursor: pointer;
 
-                &-item {
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 25%;
-                    font-size: 16px;
-                }
-
-                .ui-dropdown__btn {
-                    line-height: 50px;
-
-                    div {
-                        max-width: 80%;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-
-                    div,
-                    span {
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-                }
-
-                &-submit {
-                    display: block;
-                    width: 200px;
-                    background: #F86015;
-                    border-radius: 30px;
-                    font: 16px/20x $cStd;
-                    color: #fff;
-                    height: 50px;
-                    border: 0px;
-                    box-shadow: none;
-
-                    &:hover {
-                        background: lighten(#F86015, 5%);
-                    }
+                &:hover {
+                    background: lighten(#F86015, 5%);
                 }
             }
         }
@@ -111,6 +78,66 @@
             cursor: pointer;
         }
     }
+
+    /*
+    &-modal {
+        &__form {
+            display: block;
+            background: #fff;
+            padding: 35px 40px;
+            pointer-events: auto;
+
+            &-item {
+                margin-bottom: 10px;
+
+                &-input {
+                    width: 100%;
+                    border: 0;
+                    font: 14px/50px "Circular Std";
+                    margin-bottom: 30px;
+
+                    &.error {
+                        border-bottom: 1px solid red;
+                    }
+                }
+            }
+
+            .ui-dropdown__btn {
+                line-height: 50px;
+
+                div {
+                    max-width: 80%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                div,
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            &-submit {
+                display: block;
+                width: 200px;
+                background: #F86015;
+                border-radius: 30px;
+                font: 16px/20x $cStd;
+                color: #fff;
+                height: 50px;
+                border: 0px;
+                margin: auto;
+                box-shadow: none;
+
+                &:hover {
+                    background: lighten(#F86015, 5%);
+                }
+            }
+        }
+    }
+    */
 
     &-steps {
         padding: 100px 0px 110px;
