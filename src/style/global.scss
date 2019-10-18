@@ -253,6 +253,19 @@ textarea {
         padding: 30px 40px;
         pointer-events: auto;
 
+        &__close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 5px;
+            cursor: pointer;
+            color: #999;
+
+            &:hover {
+                color: #333;
+            }
+        }
+
         &__title {
             font: 600 24px/32px $thlM;
             text-align: center;
