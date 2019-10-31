@@ -1,0 +1,169 @@
+@import "parts/_vars.scss";
+
+.p-fs {
+    padding: 50px 0px 80px;
+
+    &__step {
+        color: #0094C1;
+        text-align: center;
+        font: bold 16px $cStd;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font: 36px $thlM;
+        text-align: center;
+        margin: 0px auto 45px;
+        max-width: 600px;
+    }
+
+    &__form {
+        display: block;
+        max-width: 600px;
+        margin: auto;
+
+        &-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+
+            &-block {
+                position: relative;
+                width: 48%;
+                padding-top: 20px;
+
+                &-date-icon {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                }
+
+                &-input {
+                    width: 100%;
+                    border-bottom: 1px solid #DEE1E5;
+                    height: 37px;
+                }
+
+                &-label {
+                    font: italic 500 12px $cStd;
+                    position: absolute;
+                    left: 0px;
+                    top: 10px;
+                    color: #7A838E;
+                }
+            }
+        }
+
+        &-info {
+            color: #7A838E;
+            font: italic 500 14px $cStd;
+            text-align: center;
+            margin: 0px auto 30px;
+            max-width: 430px;
+
+            a {
+                color: #7A838E;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &-results {
+            max-width: 260px;
+            margin: auto;
+
+            &-submit {
+                border: 0px;
+                background: #0094C1;
+                color: #fff;
+                height: 50px;
+                border-radius: 30px;
+                width: 100%;
+                font: 700 16px $cStd;
+            }
+        }
+    }
+
+    .ui-dropdown {
+        border-bottom: 1px solid #DEE1E5;
+
+        &__btn {
+            padding: 10px 0px;
+            position: relative;
+
+            span {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+        }
+
+        &__menu {
+            width: 100%;
+        }
+
+        &:hover {
+            border-color: #12172A;
+        }
+    }
+
+    &__success {
+        position: relative;
+        color: #2ECC71;
+        text-align: center;
+        font: 700 16px $cStd;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        &-icon {
+            display: block;
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__see {
+        max-width: 260px;
+        margin: auto;
+
+        &-link {
+            display: block;
+            background: #F86015;
+            box-shadow: none;
+            border: 0px;
+            color: #fff;
+            height: 50px;
+            font: bold 16px/50px $cStd;
+            border-radius: 30px;
+            text-align: center;
+
+            &:hover {
+                background: lighten(#F86015, 5%);
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .p-fs {
+        &__title {
+            font-size: 32px;
+        }
+
+        &__form-line {
+            display: block;
+
+            &-block {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
