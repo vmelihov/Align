@@ -248,9 +248,9 @@ textarea {
         margin-top: 30px;
     }
 
-    &-modal-interest {
+    &-modal-tell-us {
         background: #fff;
-        padding: 30px 40px;
+        padding: 50px 80px;
         pointer-events: auto;
 
         &__close {
@@ -266,57 +266,93 @@ textarea {
             }
         }
 
-        &__title {
-            font: 600 24px/32px $thlM;
+        &__step {
+            color: #0094C1;
             text-align: center;
-            margin-bottom: 20px;
+            font: bold 16px $cStd;
+            text-transform: uppercase;
+            margin-bottom: 30px;
         }
 
-        &__block {
-            margin-bottom: 33px;
+        &__title {
+            font: 36px $thlM;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-            .ui-dropdown {
-                border-bottom: 1px solid #DEE1E5;
-                padding-bottom: 20px;
+        &__line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
 
-                &__btn {
-                    font-size: 18px;
-                    position: relative;
+            &-block {
+                width: 48%;
 
-                    span {
-                        position: absolute;
-                        right: 0px;
-                        top: 0px;
-                    }
+                &-label {
+                    font: italic 600 12px/12px $cStd;
+                    color: #7A838E;
                 }
 
-                &__menu {
+                &-input {
+                    border: 0px;
+                    border-bottom: 1px solid #DEE1E5;
+                    height: 40px;
+                    font: 16px $cStd;
                     width: 100%;
 
-                    &-content {
-                        padding-top: 15px;
+                    &:focus {
+                        border-color: #12172A;
                     }
                 }
             }
 
-            &-input {
-                width: 100%;
-                box-shadow: none;
-                border: 0px;
-                border-bottom: 1px solid #12172A;
-                height: 50px;
-                font: 18px/20px $cStd;
+            &-title {
+                font: 600 18px $cStd;
+                margin-right: 40px;
+            }
 
-                &:focus,
-                &:active {
-                    outline: none;
+            &-radio {
+                cursor: pointer;
+                position: relative;
+                padding-left: 30px;
+
+                &-input {
+                    display: none;
+                }
+
+                &-decor {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #12172A;
+                    box-shadow: inset 0px 0px 0px 20px rgba(255, 255, 255, 0);
+                    border-radius: 50%;
+                    overflow: hidden;
+                    transition: .3s;
+                }
+
+                &-text {
+                    font: 600 16px $cStd;
+                }
+
+                &-input:checked+&-decor {
+                    box-shadow: inset 0px 0px 0px 5px #12172A;
                 }
             }
+        }
 
-            &.m-input {
-                position: relative;
-                margin-bottom: 30px;
-            }
+        &__info {
+            color: #7A838E;
+            font: bold italic 14px $cStd;
+            margin-bottom: 30px;
+        }
+
+        &__btn {
+            max-width: 260px;
+            margin: auto;
 
             &-submit {
                 background: #F86015;
@@ -324,7 +360,7 @@ textarea {
                 border: 0px;
                 color: #fff;
                 height: 50px;
-                font: bold 16px/20px $cStd;
+                font: bold 16px $cStd;
                 border-radius: 30px;
                 display: block;
                 width: 100%;
@@ -558,6 +594,27 @@ textarea {
                 display: none;
             }
         }
+
+        &modal-tell-us__line {
+            display: block;
+
+            &-block {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            &-title {
+                margin-bottom: 20px;
+            }
+
+            &-radio {
+                margin-right: 20px;
+
+                &:last-of-type {
+                    margin: 0px;
+                }
+            }
+        }
     }
 
     .menuOpened:before {
@@ -637,6 +694,10 @@ textarea {
                     display: none;
                 }
             }
+        }
+
+        &modal-tell-us {
+            padding: 50px 20px;
         }
     }
 

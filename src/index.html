@@ -49,77 +49,63 @@
 
     <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-sm" role="document">
-            <form class="g-modal-interest">
-                <div class="g-modal-interest__close fal fa-times" data-dismiss="modal" aria-label="Close"></div>
-                <h6 class="g-modal-interest__title">Choose Your Education Interest</h6>
+        <div class="modal-dialog modal-lg" role="document">
+            <form class="g-modal-tell-us">
+                <div class="g-modal-tell-us__close fal fa-times" data-dismiss="modal" aria-label="Close"></div>
+                <div class="g-modal-tell-us__step">Step 1. Getting Started</div>
 
-                <div class="g-modal-interest__block">
-                    <div class="ui-dropdown dropdown js-dropdown">
-                        <div class="ui-dropdown__btn checked js-dropdownLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="js-dropdownLinkText">Desired Education Level</div>
+                <div class="g-modal-tell-us__title">Tell us about yourself</div>
 
-                            <span class="fa fa-chevron-down"></span>
-                        </div>
-                        <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
-                            <div class="ui-dropdown__menu-content js-niceScroll">
-                                <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
-
-                                <div class="ui-dropdown__menu-content-item">
-                                    Associate’s Degree
-                                </div>
-                            </div>
-                        </div>
+                <div class="g-modal-tell-us__line">
+                    <div class="g-modal-tell-us__line-block">
+                        <div class="g-modal-tell-us__line-block-label">First Name</div>
+                        <input type="text" class="g-modal-tell-us__line-block-input" />
+                    </div>
+                    <div class="g-modal-tell-us__line-block">
+                        <div class="g-modal-tell-us__line-block-label">Last Name</div>
+                        <input type="text" class="g-modal-tell-us__line-block-input" />
                     </div>
                 </div>
 
-                <div class="g-modal-interest__block">
-                    <div class="ui-dropdown dropdown js-dropdown">
-                        <div class="ui-dropdown__btn js-dropdownLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="js-dropdownLinkText">Desired Education Level</div>
-
-                            <span class="fa fa-chevron-down"></span>
-                        </div>
-                        <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
-                            <div class="ui-dropdown__menu-content js-niceScroll">
-                                <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
-
-                                <div class="ui-dropdown__menu-content-item">
-                                    Associate’s Degree
-                                </div>
-                            </div>
-                        </div>
+                <div class="g-modal-tell-us__line">
+                    <div class="g-modal-tell-us__line-block">
+                        <input type="email" class="g-modal-tell-us__line-block-input" placeholder="Email Address" />
+                    </div>
+                    <div class="g-modal-tell-us__line-block">
+                        <input type="tel" class="g-modal-tell-us__line-block-input" placeholder="Phone Number" />
                     </div>
                 </div>
 
-                <div class="g-modal-interest__block">
-                    <div class="ui-dropdown dropdown error js-dropdown">
-                        <div class="ui-dropdown__btn js-dropdownLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <div class="js-dropdownLinkText">Desired Education Level</div>
-
-                            <span class="fa fa-chevron-down"></span>
-                        </div>
-                        <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
-                            <div class="ui-dropdown__menu-content js-niceScroll">
-                                <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
-
-                                <div class="ui-dropdown__menu-content-item">
-                                    Associate’s Degree
-                                </div>
-                            </div>
-                        </div>
+                <div class="g-modal-tell-us__line">
+                    <div class="g-modal-tell-us__line-title">
+                        Preferred School Type:
                     </div>
+
+                    <label class="g-modal-tell-us__line-radio">
+                        <input type="radio" name="type" class="g-modal-tell-us__line-radio-input" />
+                        <span class="g-modal-tell-us__line-radio-decor"></span>
+                        <span class="g-modal-tell-us__line-radio-text">Online</span>
+                    </label>
+                    <label class="g-modal-tell-us__line-radio">
+                        <input type="radio" name="type" class="g-modal-tell-us__line-radio-input" />
+                        <span class="g-modal-tell-us__line-radio-decor"></span>
+                        <span class="g-modal-tell-us__line-radio-text">Campus</span>
+                    </label>
+                    <label class="g-modal-tell-us__line-radio">
+                        <input type="radio" name="type" class="g-modal-tell-us__line-radio-input" />
+                        <span class="g-modal-tell-us__line-radio-decor"></span>
+                        <span class="g-modal-tell-us__line-radio-text">Both</span>
+                    </label>
                 </div>
 
-                <div class="g-modal-interest__block m-input">
-                    <input type="text" class="g-modal-interest__block-input" placeholder="Zip Code" />
+                <div class="g-modal-tell-us__info">
+                    By clicking Continue, I agree to be contacted by the Align, and its marketing partners by phone,
+                    which may include artificial or pre-recorded calls and/or SMS text messages, delivered via automated
+                    technology to the phone number that I have provided above.
                 </div>
 
-                <div class="g-modal-interest__block">
-                    <input class="g-modal-interest__block-submit" type="submit" value="Get Started" />
+                <div class="g-modal-tell-us__btn">
+                    <input class="g-modal-tell-us__btn-submit" type="submit" value="Continue" />
                 </div>
             </form>
         </div>
