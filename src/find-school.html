@@ -11,6 +11,7 @@
     <title>Find school</title>
     <link rel="stylesheet" href="extension/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="extension/font-awesome/css/all.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/find-school.css" />
 </head>
@@ -105,7 +106,8 @@
                 <div class="p-fs__form-line">
                     <div class="p-fs__form-line-block">
                         <div class="p-fs__form-line-block-date-icon fal fa-calendar-alt"></div>
-                        <input type="text" class="p-fs__form-line-block-input" placeholder="Starting Date" />
+                        <input type="text" class="p-fs__form-line-block-input js-datePicker"
+                            placeholder="Starting Date" />
                     </div>
                     <div class="p-fs__form-line-block">
                         <div class="ui-dropdown dropdown js-dropdown">
@@ -177,7 +179,8 @@
 
                     <div class="p-fs__form-line-block">
                         <div class="p-fs__form-line-block-date-icon fal fa-calendar-alt"></div>
-                        <input type="text" class="p-fs__form-line-block-input" placeholder="Date of Birth" />
+                        <input type="text" class="p-fs__form-line-block-input js-datePicker"
+                            placeholder="Date of Birth" />
                     </div>
                 </div>
 
@@ -210,6 +213,13 @@
     <script src="extension/bootstrap/js/popper.min.js"></script>
     <script src="extension/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/global.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".js-datePicker").datepicker();
+        });
+    </script>
 </body>
 
 </html>

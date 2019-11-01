@@ -112,6 +112,28 @@
         }
     }
 
+    &__processing {
+        color: #7A838E;
+        text-align: center;
+        font: 700 16px $cStd;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        &-loader {
+            display: block;
+            width: 70px;
+            height: 70px;
+            margin: 0px auto 30px;
+        }
+    }
+
+    &__please {
+        font: 500 16px $cStd;
+        text-align: center;
+        max-width: 400px;
+        margin: auto;
+    }
+
     &__success {
         position: relative;
         color: #2ECC71;
@@ -147,6 +169,80 @@
                 color: #fff;
                 text-decoration: none;
             }
+        }
+    }
+}
+
+.ui-datepicker {
+    width: 320px;
+
+    .ui-datepicker-next-hover {
+        right: 2px;
+        top: 2px;
+    }
+
+    .ui-datepicker-prev-hover {
+        left: 2px;
+        top: 2px;
+    }
+
+    &-calendar {
+        thead {
+            border: 1px solid #DEE1E5;
+            border-right: 0px;
+            border-left: 0px;
+        }
+    }
+
+    th{
+        padding: 10px;
+        font: 14px/20px $cStd;
+        color: #7A838E;
+    }
+}
+.ui-state-default, .ui-widget-content .ui-state-default{
+    border: 0px;
+    background: none;
+    font: 500 16px $cStd;
+    color: #12172A;
+}
+.ui-widget {
+    &.ui-widget-content {
+        border-color: #DEE1E5;
+        padding: 30px;
+    }
+
+    &-header {
+        border: 0px;
+        background: none;
+        font: bold 18px $cStd;
+        text-align: center;
+        margin-bottom: 30px;
+
+        .ui-icon {
+            background: none;
+            font-family: 'Font Awesome 5 Pro';
+            font-weight: 900;
+            text-indent: 0px;
+            font-size: 0px;
+            margin-top: -4px;
+
+            &-circle-triangle-e:before {
+                content: "\f054";
+                font-size: 14px;
+                margin-right: -1px;
+            }
+
+            &-circle-triangle-w:before {
+                content: "\f053";
+                font-size: 14px;
+                margin-left: -1px;
+            }
+        }
+
+        .ui-state-hover {
+            background: #DEE1E5;
+            border-radius: 50%;
         }
     }
 }
