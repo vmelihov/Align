@@ -194,18 +194,36 @@
         }
     }
 
-    th{
+    th {
         padding: 10px;
         font: 14px/20px $cStd;
         color: #7A838E;
     }
 }
-.ui-state-default, .ui-widget-content .ui-state-default{
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
     border: 0px;
     background: none;
-    font: 500 16px $cStd;
+    font: 500 16px/30px $cStd;
     color: #12172A;
+    text-align: center;
+    width: 30px;
+    padding: 0px;
+    border-radius: 50%;
+    transition: .3s;
 }
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight {
+    background: #DEE1E5;
+}
+
+.ui-state-default.ui-state-hover {
+    background: #0094C1;
+    color: #fff;
+}
+
 .ui-widget {
     &.ui-widget-content {
         border-color: #DEE1E5;
@@ -226,6 +244,7 @@
             text-indent: 0px;
             font-size: 0px;
             margin-top: -4px;
+            cursor: pointer;
 
             &-circle-triangle-e:before {
                 content: "\f054";
