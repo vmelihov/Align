@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">-->
+
+    <title>Find school processing</title>
+    <link rel="stylesheet" href="extension/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/find-school.css" />
+</head>
+
+<body>
+    //= template/header.html
+
+    <div class="p-fs">
+        <div class="container">
+            <div class="p-fs__step">
+                Step 2. Choose your career
+            </div>
+            <div class="p-fs__title">
+                Build your future with Align
+            </div>
+
+            <div class="p-fs__please m-build">
+                The graph below displays the lifetime earning potential based on
+                your school and occupation goals.
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <aside class="p-fs__aside">
+                        <h6 class="p-fs__aside-title">Determine your goals</h6>
+
+                        <form>
+                            <div class="p-fs__aside-block">
+                                <div class="ui-dropdown dropdown checked js-dropdown">
+                                    <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <div class="js-dropdownLinkText">Desired Education Level</div>
+
+                                        <i class="fa fa-check"></i>
+                                        <span class="fa fa-chevron-down"></span>
+                                    </div>
+                                    <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
+                                        <div class="ui-dropdown__menu-content js-niceScroll">
+                                            <input type="text" class="ui-dropdown__menu-content-input"
+                                                placeholder="Select One" />
+
+                                            <div class="ui-dropdown__menu-content-item">
+                                                Associate’s Degree
+                                            </div>
+                                            <div class="ui-dropdown__menu-content-item">
+                                                Associate’s Degree 2
+                                            </div>
+                                            <div class="ui-dropdown__menu-content-item">
+                                                Associate’s Degree 3
+                                            </div>
+                                            <div class="ui-dropdown__menu-content-item">
+                                                Sede sdfsdf
+                                            </div>
+
+                                            <p class="ui-dropdown__menu-content-search">
+                                                <input type="text"
+                                                    class="ui-dropdown__menu-content-search-input js-search"
+                                                    placeholder="Find some" />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-fs__aside-block">
+                                <div class="ui-dropdown dropdown error js-dropdown">
+                                    <div class="ui-dropdown__btn js-dropdownLink" id="e2" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <div class="js-dropdownLinkText">Professional Field</div>
+
+                                        <span class="fa fa-chevron-down"></span>
+                                    </div>
+                                    <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e2">
+                                        <div class="ui-dropdown__menu-content js-niceScroll">
+                                            <input type="text" class="ui-dropdown__menu-content-input"
+                                                placeholder="Select One" />
+
+                                            <div class="ui-dropdown__menu-content-item">
+                                                Associate’s Degree
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-fs__aside-block">
+                                <div class="ui-dropdown dropdown js-dropdown">
+                                    <div class="ui-dropdown__btn js-dropdownLink" id="e3" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <div class="js-dropdownLinkText">Occupation</div>
+
+                                        <span class="fa fa-chevron-down"></span>
+                                    </div>
+                                    <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e3">
+                                        <div class="ui-dropdown__menu-content js-niceScroll">
+                                            <input type="text" class="ui-dropdown__menu-content-input"
+                                                placeholder="Select One" />
+
+                                            <div class="ui-dropdown__menu-content-item">
+                                                Associate’s Degree
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-fs__aside-block">
+                                <div class="ui-dropdown dropdown js-dropdown">
+                                    <div class="ui-dropdown__btn js-dropdownLink" id="e3" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <div class="js-dropdownLinkText">City / State</div>
+
+                                        <span class="fa fa-chevron-down"></span>
+                                    </div>
+                                    <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e3">
+                                        <div class="ui-dropdown__menu-content js-niceScroll">
+                                            <input type="text" class="ui-dropdown__menu-content-input"
+                                                placeholder="Select One" />
+
+                                            <div class="ui-dropdown__menu-content-item">
+                                                Arcanzas
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-fs__aside-block m-submit">
+                                <input class="p-fs__aside-block-submit" type="submit" value="Calculate" />
+                            </div>
+                        </form>
+                    </aside>
+                </div>
+                <div class="col-lg-8">
+                    <div class="p-fs__align">
+                        <a href="" class="p-fs__align-link">
+                            Align My Career
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    //= template/footer.html
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="extension/jquery.nicescroll.js"></script>
+    <script src="extension/bootstrap/js/popper.min.js"></script>
+    <script src="extension/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>

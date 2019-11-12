@@ -89,29 +89,6 @@
         }
     }
 
-    .ui-dropdown {
-        border-bottom: 1px solid #DEE1E5;
-
-        &__btn {
-            padding: 10px 0px;
-            position: relative;
-
-            span {
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
-        }
-
-        &__menu {
-            width: 100%;
-        }
-
-        &:hover {
-            border-color: #12172A;
-        }
-    }
-
     &__processing {
         color: #7A838E;
         text-align: center;
@@ -132,6 +109,10 @@
         text-align: center;
         max-width: 400px;
         margin: auto;
+
+        &.m-build {
+            margin: 0px auto 60px;
+        }
     }
 
     &__success {
@@ -169,6 +150,94 @@
                 color: #fff;
                 text-decoration: none;
             }
+        }
+    }
+
+    &__aside {
+        display: block;
+        border: 1px solid #DEE1E5;
+        border-top: 4px solid #0094C1;
+        padding: 50px;
+
+        &-title {
+            font: 600 24px $cStd;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &-block {
+            margin-bottom: 30px;
+
+            &-submit {
+                display: block;
+                background: #0094C1;
+                color: #fff !important;
+                height: 50px;
+                min-width: 100%;
+                max-width: 260px;
+                font: bold 16px/48px $cStd;
+                border-radius: 30px;
+                text-align: center;
+                cursor: pointer;
+                margin: auto;
+
+                &:hover {
+                    background: lighten(#0094C1, 5%);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__align {
+        max-width: 260px;
+        margin: auto;
+
+        &-link {
+            display: block;
+            background: #F86015;
+            box-shadow: none;
+            border: 0px;
+            color: #fff;
+            height: 50px;
+            font: bold 16px/48px $cStd;
+            border-radius: 30px;
+            width: 100%;
+            text-align: center;
+
+            &:hover {
+                background: lighten(#F86015, 5%);
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    .ui-dropdown {
+        border-bottom: 1px solid #DEE1E5;
+
+        &__btn {
+            padding: 10px 0px;
+            position: relative;
+
+            span {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+
+            i {
+                top: 50%;
+                margin-top: -12px;
+            }
+        }
+
+        &__menu {
+            width: 100%;
+        }
+
+        &:hover {
+            border-color: #12172A;
         }
     }
 }
@@ -262,6 +331,62 @@
         .ui-state-hover {
             background: #DEE1E5;
             border-radius: 50%;
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .p-fs__aside {
+        font-size: 0px;
+        margin-bottom: 30px;
+
+        &-block {
+            display: inline-block;
+            vertical-align: top;
+            width: 48%;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                margin-right: 4%;
+            }
+
+            .ui-dropdown {
+                font-size: 15px;
+
+                &__btn {
+                    i {
+                        right: 25px;
+                    }
+
+                    span {
+                        right: 0px;
+                    }
+                }
+            }
+
+            &.m-submit {
+                display: block;
+                width: 260px;
+                margin: 0px auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .p-fs {
+        &__aside {
+            border: 0px;
+            padding: 0px;
+
+            &-block {
+                width: 100%;
+                margin: 0px 0px 20px !important;
+
+                &.m-submit {
+                    width: auto;
+                }
+            }
         }
     }
 }
