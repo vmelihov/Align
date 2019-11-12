@@ -115,17 +115,29 @@
 
             .ui-dropdown {
                 border-bottom: 1px solid #DEE1E5;
-                padding-bottom: 20px;
 
                 &__btn {
-                    font-size: 18px;
+                    padding: 10px 0px;
                     position: relative;
 
                     span {
                         position: absolute;
-                        right: -47px;
-                        top: 0px;
+                        right: 10px;
+                        top: 10px;
                     }
+
+                    i {
+                        top: 50%;
+                        margin-top: -12px;
+                    }
+                }
+
+                &__menu {
+                    width: 100%;
+                }
+
+                &:hover {
+                    border-color: #12172A;
                 }
             }
 
