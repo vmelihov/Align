@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css'),
+    //cssmin = require('gulp-minify-css'),
     //imagemin = require('gulp-imagemin'),
     //pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
@@ -75,7 +75,7 @@ gulp.task('style:build', function () {
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
-        .pipe(cssmin()) //Сожмем
+        //.pipe(cssmin()) //Сожмем
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({

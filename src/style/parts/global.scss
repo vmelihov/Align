@@ -1,5 +1,5 @@
-@import "parts/_fonts.scss";
-@import "parts/_vars.scss";
+@import "_fonts.scss";
+@import "_vars.scss";
 
 body {
     font: 14px $cStd;
@@ -371,6 +371,100 @@ textarea {
             }
         }
     }
+
+    &-aside {
+        display: block;
+        border: 1px solid #DEE1E5;
+        border-top: 4px solid #0094C1;
+        padding: 50px;
+
+        &__title {
+            font: 600 24px $cStd;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &__block {
+            position: relative;
+            margin-bottom: 30px;
+
+            &-check {
+                position: absolute;
+                top: 50%;
+                margin-top: -9px;
+                right: -23px;
+                color: #2ECC71;
+                font-size: 14px;
+                line-height: 18px;
+                display: none;
+            }
+
+            &-input {
+                width: 100%;
+                border-bottom: 1px solid #DEE1E5;
+                height: 37px;
+
+                &:hover {
+                    border-color: #12172A;
+                }
+            }
+
+            &.error &-input {
+                border-bottom: 1px solid red !important;
+            }
+
+            &.checked &-check {
+                display: block;
+            }
+
+            &-submit {
+                display: block;
+                background: #0094C1;
+                color: #fff !important;
+                height: 50px;
+                min-width: 100%;
+                max-width: 260px;
+                font: bold 16px/48px $cStd;
+                border-radius: 30px;
+                text-align: center;
+                cursor: pointer;
+                margin: auto;
+
+                &:hover {
+                    background: lighten(#0094C1, 5%);
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .ui-dropdown {
+            border-bottom: 1px solid #DEE1E5;
+
+            &__btn {
+                padding: 10px 0px;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                }
+
+                i {
+                    top: 50%;
+                    margin-top: -12px;
+                }
+            }
+
+            &__menu {
+                width: 100%;
+            }
+
+            &:hover {
+                border-color: #12172A;
+            }
+        }
+    }
 }
 
 .main-subscribe {
@@ -466,21 +560,12 @@ textarea {
             position: relative;
             padding: 55px 15px 15px;
 
+            &.m-noInput {
+                padding: 15px;
+            }
+
             &-input {
                 display: none;
-                /*
-                border: 0px;
-                display: block;
-                width: 100%;
-                font: 16px/20px $cStd;
-                height: 30px;
-                margin-bottom: 15px;
-
-                &:active,
-                &:focus {
-                    outline: none;
-                }
-                */
             }
 
             &-item {
@@ -615,6 +700,49 @@ textarea {
                 }
             }
         }
+
+        &aside {
+            font-size: 0px;
+            margin-bottom: 30px;
+
+            &__block {
+                display: inline-block;
+                vertical-align: top;
+                width: 48%;
+                font-size: 15px;
+
+                &:nth-child(1),
+                &:nth-child(3) {
+                    margin-right: 4%;
+                }
+
+                .ui-dropdown {
+                    &__btn {
+                        i {
+                            right: 25px;
+                        }
+
+                        span {
+                            right: 0px;
+                        }
+                    }
+                }
+
+                &.m-submit {
+                    display: block;
+                    width: 260px;
+                    margin: 0px auto;
+                }
+
+                &-check {
+                    right: 10px;
+                }
+
+                &-input {
+                    padding-right: 50px;
+                }
+            }
+        }
     }
 
     .menuOpened:before {
@@ -654,6 +782,22 @@ textarea {
                 color: #fff;
                 background: none;
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .g-aside {
+        border: 0px;
+        padding: 0px;
+
+        &__block {
+            width: 100%;
+            margin: 0px 0px 20px !important;
+
+            &.m-submit {
+                width: auto;
             }
         }
     }

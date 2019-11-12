@@ -1,4 +1,4 @@
-@import "parts/_vars.scss";
+@import "_vars.scss";
 
 .hc {
     &-header {
@@ -98,6 +98,7 @@
         }
     }
 
+    /*
     &-aside {
         display: block;
         border: 1px solid #DEE1E5;
@@ -187,6 +188,7 @@
             }
         }
     }
+    */
 
     &-redefine {
         padding: 170px 0px 100px;
@@ -222,6 +224,7 @@
 
 @media (max-width: $screen-sm) {
     .hc {
+        /*
         &-aside {
             font-size: 0px;
             margin-bottom: 30px;
@@ -258,6 +261,7 @@
                 }
             }
         }
+        */
 
         &-redefine {
             padding: 135px 0px;
@@ -305,6 +309,7 @@
             }
         }
 
+        /*
         &-aside {
             border: 0px;
             padding: 0px;
@@ -318,6 +323,7 @@
                 }
             }
         }
+        */
 
         &-redefine {
             padding: 100px 0;

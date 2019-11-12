@@ -1,4 +1,4 @@
-@import "parts/_vars.scss";
+@import "_vars.scss";
 
 .p-fs {
     padding: 50px 0px 80px;
@@ -153,42 +153,6 @@
         }
     }
 
-    &__aside {
-        display: block;
-        border: 1px solid #DEE1E5;
-        border-top: 4px solid #0094C1;
-        padding: 50px;
-
-        &-title {
-            font: 600 24px $cStd;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        &-block {
-            margin-bottom: 30px;
-
-            &-submit {
-                display: block;
-                background: #0094C1;
-                color: #fff !important;
-                height: 50px;
-                min-width: 100%;
-                max-width: 260px;
-                font: bold 16px/48px $cStd;
-                border-radius: 30px;
-                text-align: center;
-                cursor: pointer;
-                margin: auto;
-
-                &:hover {
-                    background: lighten(#0094C1, 5%);
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-
     &__align {
         max-width: 260px;
         margin: auto;
@@ -331,62 +295,6 @@
         .ui-state-hover {
             background: #DEE1E5;
             border-radius: 50%;
-        }
-    }
-}
-
-@media (max-width: $screen-sm) {
-    .p-fs__aside {
-        font-size: 0px;
-        margin-bottom: 30px;
-
-        &-block {
-            display: inline-block;
-            vertical-align: top;
-            width: 48%;
-
-            &:nth-child(1),
-            &:nth-child(3) {
-                margin-right: 4%;
-            }
-
-            .ui-dropdown {
-                font-size: 15px;
-
-                &__btn {
-                    i {
-                        right: 25px;
-                    }
-
-                    span {
-                        right: 0px;
-                    }
-                }
-            }
-
-            &.m-submit {
-                display: block;
-                width: 260px;
-                margin: 0px auto;
-            }
-        }
-    }
-}
-
-@media (max-width: 670px) {
-    .p-fs {
-        &__aside {
-            border: 0px;
-            padding: 0px;
-
-            &-block {
-                width: 100%;
-                margin: 0px 0px 20px !important;
-
-                &.m-submit {
-                    width: auto;
-                }
-            }
         }
     }
 }

@@ -1,4 +1,4 @@
-@import "parts/_vars.scss";
+@import "_vars.scss";
 
 .contact {
     &-header {
@@ -92,6 +92,7 @@
         }
     }
 
+    /*
     &-aside {
         display: block;
         border: 1px solid #DEE1E5;
@@ -169,6 +170,7 @@
             }
         }
     }
+    */
 
     &-redefine {
         padding: 170px 0px 100px;
@@ -281,10 +283,12 @@ input:-moz-placeholder {
             margin-bottom: 80px;
         }
 
+        /*
         &-aside {
             border: 0px;
             padding: 0px;
         }
+        */
 
         &-redefine {
             padding: 100px 0;

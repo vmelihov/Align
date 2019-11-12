@@ -11,8 +11,7 @@
     <title>Educators</title>
     <link rel="stylesheet" href="extension/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="extension/font-awesome/css/all.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/educators.css" />
+    <link rel="stylesheet" href="css/all.css" />
 </head>
 
 <body>
@@ -681,51 +680,57 @@
             </div>
 
             <div class="col-lg-4">
-                <aside class="edcrs-aside">
-                    <h6 class="edcrs-aside__title">Determine your goals</h6>
-
+                <aside class="g-aside">
+                    <h6 class="g-aside__title">Determine your goals</h6>
+                
                     <form>
-                        <div class="edcrs-aside__block">
-                            <div class="ui-dropdown dropdown js-dropdown">
-                                <div class="ui-dropdown__btn checked js-dropdownLink" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Desired Education Level
-
+                        <div class="g-aside__block">
+                            <div class="ui-dropdown dropdown checked js-dropdown">
+                                <div class="ui-dropdown__btn js-dropdownLink" id="el" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <div class="js-dropdownLinkText">Desired Education Level</div>
+                
                                     <i class="fa fa-check"></i>
                                     <span class="fa fa-chevron-down"></span>
                                 </div>
-                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="el">
                                     <div class="ui-dropdown__menu-content js-niceScroll">
-                                        <input type="text" class="ui-dropdown__menu-content-input"
-                                            placeholder="Select One" />
-
+                                        <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
+                
                                         <div class="ui-dropdown__menu-content-item">
                                             Associate’s Degree
                                         </div>
+                                        <div class="ui-dropdown__menu-content-item">
+                                            Associate’s Degree 2
+                                        </div>
+                                        <div class="ui-dropdown__menu-content-item">
+                                            Associate’s Degree 3
+                                        </div>
+                                        <div class="ui-dropdown__menu-content-item">
+                                            Sede sdfsdf
+                                        </div>
+                
+                                        <p class="ui-dropdown__menu-content-search">
+                                            <input type="text" class="ui-dropdown__menu-content-search-input js-search"
+                                                placeholder="Find some" />
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="edcrs-aside__block">
+                
+                        <div class="g-aside__block">
                             <div class="ui-dropdown dropdown error js-dropdown">
-                                <div class="ui-dropdown__btn js-dropdownLink" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Area of Study
-
+                                <div class="ui-dropdown__btn js-dropdownLink" id="e2" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <div class="js-dropdownLinkText">Professional Field</div>
+                
                                     <span class="fa fa-chevron-down"></span>
                                 </div>
-                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e2">
                                     <div class="ui-dropdown__menu-content js-niceScroll">
-                                        <input type="text" class="ui-dropdown__menu-content-input"
-                                            placeholder="Select One" />
-
-                                        <div class="ui-dropdown__menu-content-item">
-                                            Associate’s Degree
-                                        </div>
-                                        <div class="ui-dropdown__menu-content-item active">
-                                            Associate’s Degree
-                                        </div>
+                                        <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
+                
                                         <div class="ui-dropdown__menu-content-item">
                                             Associate’s Degree
                                         </div>
@@ -733,20 +738,19 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="edcrs-aside__block">
+                
+                        <div class="g-aside__block">
                             <div class="ui-dropdown dropdown js-dropdown">
-                                <div class="ui-dropdown__btn js-dropdownLink" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Occupation
-
+                                <div class="ui-dropdown__btn js-dropdownLink" id="e3" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <div class="js-dropdownLinkText">Occupation</div>
+                
                                     <span class="fa fa-chevron-down"></span>
                                 </div>
-                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu">
-                                    <div class="ui-dropdown__menu-content js-niceScroll">
-                                        <input type="text" class="ui-dropdown__menu-content-input"
-                                            placeholder="Select One" />
-
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e3">
+                                    <div class="ui-dropdown__menu-content m-noInput js-niceScroll">
+                                        <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
+                
                                         <div class="ui-dropdown__menu-content-item">
                                             Associate’s Degree
                                         </div>
@@ -754,12 +758,35 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="edcrs-aside__block m-input">
-                            <input type="text" class="edcrs-aside__block-input" placeholder="Zip Code" />
+                
+                        <div class="g-aside__block">
+                            <div class="ui-dropdown dropdown js-dropdown">
+                                <div class="ui-dropdown__btn js-dropdownLink" id="e3" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <div class="js-dropdownLinkText">City / State</div>
+                
+                                    <span class="fa fa-chevron-down"></span>
+                                </div>
+                                <div class="dropdown-menu ui-dropdown__menu js-dropdownMenu" aria-labelledby="e3">
+                                    <div class="ui-dropdown__menu-content js-niceScroll">
+                                        <input type="text" class="ui-dropdown__menu-content-input" placeholder="Select One" />
+                
+                                        <div class="ui-dropdown__menu-content-item">
+                                            Arcanzas
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <input class="edcrs-aside__block-submit" type="submit" value="Explore" />
+                
+                        <div class="g-aside__block error checked">
+                            <i class="fa fa-check g-aside__block-check"></i>
+                            <input type="text" class="g-aside__block-input" placeholder="Some input" />
+                        </div>
+                
+                        <div class="g-aside__block m-submit">
+                            <input class="g-aside__block-submit" type="submit" value="Calculate" />
+                        </div>
                     </form>
                 </aside>
             </div>

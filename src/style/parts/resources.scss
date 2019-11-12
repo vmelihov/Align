@@ -1,15 +1,16 @@
-@import "parts/_vars.scss";
+@import "_vars.scss";
 
-.about {
+.res {
     &-header {
-        background: url("../img/about/bg-header.jpg") center center no-repeat;
-        background-size: cover;
-        box-shadow: inset 0px 0px 0px 5000px rgba(0, 0, 0, .2);
-        padding: 110px 0px 85px;
-        color: #fff;
+        position: relative;
+        box-shadow: inset 0px -1px 0px #DEE1E5;
+        padding: 80px 0px 90px;
         text-align: center;
+        background: #FAFBFB;
+        margin-bottom: 100px;
 
         &__subtitle {
+            color: #0094C1;
             font: bold 16px/19px $cStd;
             margin-bottom: 30px;
             text-transform: uppercase;
@@ -17,16 +18,34 @@
 
         &__title {
             font: 64px/75px $thlM;
-            max-width: 750px;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            font: 16px/20px $cStd;
+            max-width: 650px;
             margin: auto;
+        }
+
+        &__scroll {
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            width: 40px;
+            height: 40px;
+            margin-left: -20px;
+            background: #fff;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            box-shadow: 0px 5px 10px rgba(18, 23, 42, 0.1);
+            cursor: pointer;
         }
     }
 
-    &-welcome {
+    &-block {
         text-align: center;
-        padding: 100px 0px;
-        box-shadow: inset 0px -1px 0px #DEE1E5;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
 
         &__title {
             font: 48px/56px $thlM;
@@ -36,42 +55,29 @@
         &__text {
             font: 16px/20px $cStd;
             max-width: 750px;
-            margin: auto;
-        }
-    }
-
-    &-mission {
-        background: url("../img/about//bg-mission.png") 0px center no-repeat;
-        background-size: 45% auto;
-        padding: 50px 0px 50px 50%;
-        margin-bottom: 150px;
-
-        &__title {
-            font: 48px/56px $thlM;
-            margin-bottom: 40px;
+            margin: 0px auto 50px;
         }
 
-        &__text {
-            font: 16px/20px $cStd;
-            margin-bottom: 50px;
-        }
+        &__carousel {
+            text-align: left;
 
-        &__btn {
-            max-width: 200px;
+            &-item {
+                font: 16px/20px $cStd;
+                margin-bottom: 50px;
 
-            &-link {
-                display: block;
-                background: #0094C1;
-                color: #fff !important;
-                height: 50px;
-                font: bold 16px/48px $cStd;
-                border-radius: 30px;
-                text-align: center;
-                cursor: pointer;
+                &-img {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
 
-                &:hover {
-                    background: lighten(#0094C1, 5%);
-                    text-decoration: none;
+                &-name {
+                    font: bold 24px/30px $cStd;
+                    margin-bottom: 20px;
+                }
+
+                &-info {
+                    margin-bottom: 30px;
                 }
             }
         }
@@ -161,16 +167,7 @@
 }
 
 @media (max-width: 1024px) {
-    .about {
-        &-welcome {
-            padding: 80px 0px;
-            margin-bottom: 80px;
-        }
-
-        &-mission {
-            margin-bottom: 80px;
-        }
-
+    .res {
         &-partners {
             padding: 80px 0px;
         }
@@ -178,7 +175,7 @@
 }
 
 @media (max-width: $screen-sm) {
-    .about {
+    .res {
         &-redefine {
             padding: 135px 0px;
 
@@ -197,42 +194,70 @@
     }
 }
 
-@media (max-width: $screen-xs) {
-    .about {
+@media (min-width: $screen-sm-min) {
+    .res-block .carousel {
+        &-inner {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        &-item {
+            display: block;
+            float: none;
+            margin: 0px;
+        }
+
+        &-indicators {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .res {
         &-header {
-            padding: 50px 0px 10px;
+            padding: 50px 0px 30px;
 
             &__title {
                 font-size: 48px;
                 line-height: 56px;
             }
 
-            &__subtitle {
+            &__subtitle,
+            &__text {
                 font-size: 14px;
                 line-height: 20px;
             }
         }
 
-        &-welcome {
-            padding: 50px 0px;
-
+        &-block {
             &__title {
                 font-size: 36px;
                 line-height: 42px;
-                margin-bottom: 15px;
             }
-        }
 
-        &-mission {
-            padding: 50px 0px;
-            background-position: 0px 115px;
-            background-size: 90vw auto;
-            margin: 0px;
+            &__text {
+                font-size: 14px;
+                line-height: 20px;
+            }
 
-            &__title {
-                font-size: 36px;
-                line-height: 42px;
-                margin-bottom: 75vw;
+            &__carousel {
+                .carousel-indicators {
+                    li {
+                        background: #DEE1E5;
+                        width: 6px;
+                        height: 6px;
+                        border: 0px;
+                        border-radius: 50%;
+                        margin: 0px 10px;
+
+                        &.active {
+                            background: #0094C1;
+                        }
+                    }
+                }
             }
         }
 
